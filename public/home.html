@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Major Project : Real Time File Share </title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .center {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        
+        .button-sender {
+            background-color: #008CBA;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 2em;
+            border-radius: 1em;
+            margin-bottom: 10%;
+            transition-duration: 0.4s;
+        }
+        
+        .button-sender:hover {
+            background-color: rgb(231, 199, 199);
+            color: #000;
+            border: 2px solid #008CBA;
+        }
+        
+        .button-receiver {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 2em;
+            border-radius: 1em;
+            margin-top: 10%;
+            transition-duration: 0.4s;
+        }
+        
+        .button-receiver:hover {
+            background-color: rgb(231, 199, 199);
+            color: #000;
+            border: 2px solid #4CAF50;
+        }
+        
+        .heading {
+            margin-bottom: 20%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="app">
+        <div class="center">
+            <div class="heading">
+                <h1>Share your files securely</h1>
+            </div>
+            <div>
+                <!-- link to sender -->
+                <h2>Send File :</h2>
+                <a href="/sender">
+                    <button class="button-sender" id="sender-start-con-btn">Sender</button>
+                </a>
+            </div>
+
+            <div>
+                <!-- link to receiver -->
+                <h2>Receive File :</h2>
+                <a href="/receiver">
+                    <button class="button-receiver" id="receiver-start-con-btn">Receiver</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

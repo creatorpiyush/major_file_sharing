@@ -8,10 +8,15 @@ const server = require("http").createServer(app);
 
 const io = require("socket.io")(server);
 
+// * home page
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "home.html"));
+});
+
 app.use(express.static(path.join(__dirname, "public")));
 
 // * sender route
-app.get("/", (req, res) => {
+app.get("/sender", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
