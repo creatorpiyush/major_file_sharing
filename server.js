@@ -10,6 +10,14 @@ const io = require("socket.io")(server);
 
 app.use(express.static(path.join(__dirname, "public")));
 
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "public/index.html"));
+});
+
+app.get("/receiver", (req, res) => {
+  res.sendFile(path.join(__dirname, "public/receiver.html"));
+});
+
 io.on("connection", (socket) => {
   socket.on("sender-join", (data) => {
     socket.join(data.uid);
