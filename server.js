@@ -8,7 +8,7 @@ const server = require("http").createServer(app);
 
 const io = require("socket.io")(server);
 
-// * home page
+// * home page route
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "home.html"));
 });
