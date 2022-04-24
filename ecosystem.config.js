@@ -1,7 +1,7 @@
 module.exports = {
   apps: [
     {
-      name: "file share app",
+      name: "app1",
       script: "./server.js",
     },
   ],
