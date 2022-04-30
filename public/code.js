@@ -14,10 +14,14 @@
       let joinID = generateID();
       document.querySelector("#join-id").innerHTML = `
       <b>Room ID:</b> 
-      <span>${joinID}</span>`;
-
+      <span>${joinID}</span>
+      <button id="copyButton">Copy Room ID</button>`;
       socket.emit("sender-join", {
         uid: joinID,
+      });
+
+      document.querySelector("#copyButton").addEventListener("click", () => {
+        navigator.clipboard.writeText(joinID);
       });
     });
 
