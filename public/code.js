@@ -20,6 +20,7 @@
         uid: joinID,
       });
 
+      // copy button added
       document.querySelector("#copyButton").addEventListener("click", () => {
         navigator.clipboard.writeText(joinID);
       });
